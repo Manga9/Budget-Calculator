@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col col-md-2"></div>
+    <div class="col col-md-4">
+        <div class="income">
+            <h2>Income</h2>
+            <div class="listOfCards">
+                <div *ngFor="let item of budgetItems">
+                    <app-budget-item-card *ngIf="item.amount >= 0" [item] = "item" (xButtonClick)="onDeleteButtonClick(item)"></app-budget-item-card>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col col-md-4">
+        <div class="expenses">
+            <h2>Expenses</h2>
+            <div class="listOfCards">
+                <div *ngFor="let item of budgetItems">
+                    <app-budget-item-card *ngIf="item.amount < 0" [item] = "item" (xButtonClick)="onDeleteButtonClick(item)"></app-budget-item-card>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col col-md-2"></div>
+</div>

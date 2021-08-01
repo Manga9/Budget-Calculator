@@ -1,0 +1,7 @@
+<div class="box-container">
+    <div class="box" [ngClass]="{ 'income': item.amount >= 0, 'expense': item.amount < 0 }">
+        <div class="desc">{{item.description}}</div>
+        <div class="amount">{{item.amount}}</div>
+    </div>
+    <div class='removeIcon' (click)="onXButtonClick()">x</div>
+</div>

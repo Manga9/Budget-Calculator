@@ -1,0 +1,15 @@
+<div class="main">
+    <div class="top-header">
+        <h1 class="text-center">Budget Calculator</h1>
+    </div>
+    <div class="result">
+        <h2 class="text-center" [ngClass]="{'green': totalBudget > 0, 'red': totalBudget < 0}">{{totalBudget}}</h2>
+    </div>
+    <div class="container text-center">
+        <app-add-item-form (formItems)="addItem($event)"></app-add-item-form>
+        <hr>
+    </div>
+    <div class="container">
+        <app-budget-item-list [budgetItems] = "budgetItems" (deleteButton)="deleteItem($event)"></app-budget-item-list>
+    </div>
+</div>

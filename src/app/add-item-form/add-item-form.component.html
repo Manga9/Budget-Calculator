@@ -1,0 +1,7 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" class="form inline-form">
+    <input class="amount form-control" type="number" placeholder="Amount" name="amount" required ngModel #amount="ngModel">
+    <input class="desc form-control" type="text" placeholder="Description" name="description" required ngModel #description="ngModel">
+    <button class="btn btn-primary" [disabled]="f.invalid">Add</button>
+    <div class="alert alert-danger" *ngIf="amount.errors?.required && amount.touched">Amount value is required</div>
+    <div class="alert alert-danger" *ngIf="description.errors?.required && description.touched">Description value is required</div>
+</form>

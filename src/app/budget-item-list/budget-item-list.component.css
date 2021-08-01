@@ -1,0 +1,15 @@
+h2 {
+    font-size: 40px;
+}
+
+.income h2 {
+    color: #080;
+}
+
+.expenses h2 {
+    color: #e03131;
+}
+
+.listOfCards {
+    margin-top: 20px;
+}

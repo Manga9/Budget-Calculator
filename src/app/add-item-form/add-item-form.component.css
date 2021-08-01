@@ -1,0 +1,31 @@
+form {
+    margin: 30px auto;
+}
+
+input {
+    display: inline-block;
+    background-color: #efefef;
+    border-color: #efefef;
+}
+
+input:focus {
+    box-shadow: none;
+    border-color: #efefef;
+    background-color: #efefef;
+}
+
+.amount {
+    width: 9%;
+}
+
+.desc {
+    width: 38%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.alert {
+    max-width: 54%;
+    margin: 13px auto;
+    font-weight: 700;
+}
